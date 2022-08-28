@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Framework{% endblock %}
+
+{% block body %}
+    <h1>Framework</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ framework.id }}</td>
+            </tr>
+            <tr>
+                <th>NomFramework</th>
+                <td>{{ framework.nomFramework }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_framework_index') }}">back to list</a>
+
+    <a href="{{ path('app_framework_edit', {'id': framework.id}) }}">edit</a>
+
+    {{ include('framework/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Framework{% endblock %}
+
+{% block body %}
+    <h1>Create new Framework</h1>
+
+    {{ include('framework/_form.html.twig') }}
+
+    <a href="{{ path('app_framework_index') }}">back to list</a>
+{% endblock %}

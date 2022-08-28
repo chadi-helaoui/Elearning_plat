@@ -1,0 +1,8 @@
+App\Entity\Cours:
+  cours_{1..10}:
+    nomCours: <word()>
+    description: <text()>
+    url: <sentence(6)>
+    difficulte: <word()>
+    etudiant: '@etudiant_*'
+    enseigant: '@enseigant_*'

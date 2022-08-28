@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Framework index{% endblock %}
+
+{% block body %}
+    <h1>Framework index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>NomFramework</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for framework in frameworks %}
+            <tr>
+                <td>{{ framework.id }}</td>
+                <td>{{ framework.nomFramework }}</td>
+                <td>
+                    <a href="{{ path('app_framework_show', {'id': framework.id}) }}">show</a>
+                    <a href="{{ path('app_framework_edit', {'id': framework.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_framework_new') }}">Create new</a>
+{% endblock %}
