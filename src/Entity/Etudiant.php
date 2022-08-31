@@ -20,7 +20,7 @@ use Symfony\Component\Validator\Constraints as Assert;
         'get',
         'delete' => ['security' => 'is_granted("ROLE_ADMIN")'],
         'put' => ['security' => 'is_granted("ROLE_ADMIN")'],
-        'patch' => ['security' => 'is_granted("ROLE_ENS")']
+        'patch' => ['security' => 'is_granted("ROLE_ETUD")']
 
     ]
 )]

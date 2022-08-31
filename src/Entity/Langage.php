@@ -11,7 +11,17 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 
 #[ORM\Entity(repositoryClass: LangageRepository::class)]
-#[ApiResource]
+#[ApiResource(
+    collectionOperations: [
+        'get',
+        'post' => ['security' => 'is_granted("ROLE_ADMIN")']
+    ],
+    itemOperations: [
+        'get',
+        'put' => ['security' => 'is_granted("ROLE_ADMIN")'],
+        'patch' => ['security' => 'is_granted("ROLE_ADMIN")']
+    ]
+)]
 class Langage
 {
     #[ORM\Id]

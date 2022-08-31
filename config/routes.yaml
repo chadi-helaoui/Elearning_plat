@@ -1,3 +1,8 @@
+question_create:
+  path: /question/create
+  methods: GET|POST
+  controller: App\Controller\Question\CreateController
+
 controllers:
   resource: ../src/Controller/
   type: attribute

@@ -1,4 +1,0 @@
-App\Entity\Enseignant:
-  etudiant_{1..10}:
-    nom: <lastname()>
-    prenom: <firstname()>

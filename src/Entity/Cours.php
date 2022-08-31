@@ -19,7 +19,9 @@ use Symfony\Component\Validator\Constraints as Assert;
     ],
     itemOperations: [
         'get',
-        'put' => ['security' => 'is_granted("ROLE_ETUD") and object.getOwner() == user']
+        'put' => ['security' => 'is_granted("ROLE_ETUD") and object.getOwner() == user'],
+        'delete' => ['security' => 'is_granted("ROLE_ETUD") and object.getOwner() == user'],
+        'patch' => ['security' => 'is_granted("ROLE_ETUD") and object.getOwner() == user'],
 
     ],
     attributes: ["pagination_items_per_page" => 5]
