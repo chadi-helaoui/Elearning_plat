@@ -58,7 +58,7 @@ class Cours
         Assert\NotBlank(),
         Groups(['cours.read', 'cours.write'])
     ]
-    #[Assert\Choice(["Débutant", "Intermédiare", "Avancée"])]
+    #[Assert\Choice(["Débutant", "Intermédiaire", "Avancée"])]
     private ?string $difficulte = null;
 
     #[ORM\ManyToOne(inversedBy: 'cours')]
