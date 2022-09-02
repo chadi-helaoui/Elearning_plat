@@ -54,4 +54,3 @@ class AnswerController extends AbstractController
         return $this->render('answer/renseigner.html.twig', ['qcm' => $qcm, 'titre' => $titre]);
     }
 }
-//
